@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍔 DashDine</div>
+        <nav>
+            <a href="#" id="cart-link">🛒 Количка (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="restaurants-view">
+            <h1>Избери ресторант</h1>
+            <div id="restaurants-list" class="restaurants-grid"></div>
+        </div>
+
+        <div id="menu-view" style="display:none;">
+            <button id="back-button">← Назад към ресторанти</button>
+            <h2 id="restaurant-name"></h2>
+            <div id="menu-list" class="products-grid"></div>
+        </div>
+
+        <div id="cart-view" style="display:none;">
+            <button id="back-from-cart">← Назад</button>
+            <h2>Вашата количка</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">Общо: 0.00 лв</div>
+            <button id="checkout-button">Поръчай сега</button>
+        </div>
+    </main>
+
+    <script src="restaurants.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
