@@ -31,5 +31,16 @@ const restaurants = [
             { id: 8, name: "Карбонара", price: 8.99, image: "https://via.placeholder.com/300x200?text=Carbonara", category: "Паста" },
             { id: 9, name: "Тирамису", price: 5.50, image: "https://via.placeholder.com/300x200?text=Tiramisu", category: "Десерти" }
         ]
+    },
+    {
+        id: 4,
+        name: "Subway",
+        logo: "https://logo.clearbit.com/subway.com",
+        categories: ["Сандвичи", "Салати", "Напитки"],
+        menu: [
+            { id: 10, name: "Италиански сандвич", price: 7.99, image: "https://via.placeholder.com/300x200?text=Italian+Sandwich", category: "Сандвичи" },
+            { id: 11, name: "Зелена салата", price: 4.99, image: "https://via.placeholder.com/300x200?text=Green+Salad", category: "Салати" },
+            { id: 12, name: "Спрайт 500ml", price: 2.49, image: "https://via.placeholder.com/300x200?text=Sprite", category: "Напитки" }
+        ]
     }
 ];
