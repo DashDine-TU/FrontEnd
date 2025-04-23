@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashDine</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">🍔 DashDine</div>
         <nav>
-            <a href="#" id="cart-link">🛒 Количка (<span id="cart-count">0</span>)</a>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" id="home-link">Начало</a></li>
+                <li><a href="#" id="cart-link">🛒 Количка (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="about-link">За нас</a></li>
+                <li id="auth-link"><a href="#" id="login-link">Вход</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div id="restaurants-view">
-            <h1>Избери ресторант</h1>
-            <div id="restaurants-list" class="restaurants-grid"></div>
+        <div id="home-view">
+            <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a680?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="hero-overlay">
+                    <h1>Добре дошли в DashDine!</h1>
+                    <p>Открийте любимите си ястия от най-добрите ресторанти в града, доставени бързо до вас.</p>
+                    <button id="explore-button" class="cta-button">Разгледай ресторантите</button>
+                </div>
+            </section>
+            <section class="featured-restaurants">
+                <h2>Популярни ресторанти</h2>
+                <div id="restaurants-list" class="restaurants-grid"></div>
+            </section>
         </div>
 
         <div id="menu-view" style="display:none;">
@@ -33,7 +49,108 @@
             <div id="cart-total">Общо: 0.00 лв</div>
             <button id="checkout-button">Поръчай сега</button>
         </div>
+
+        <div id="about-view" style="display:none;">
+            <section class="about-hero">
+                <h1>За DashDine</h1>
+                <p>Вашата платформа за вкусна храна, доставена с любов и грижа!</p>
+            </section>
+            <section class="about-mission">
+                <h2>Нашата мисия</h2>
+                <p>В DashDine вярваме, що храната е повече от просто храна – тя е изживяване, споделяне и радост. Нашата мисия е да свързваме хората с най-добрите ресторанти в града, като предлагаме бърза, надеждна и удобна доставка. Стремим се да направим всяка поръчка специална, от първата хапка до последната!</p>
+            </section>
+            <section class="about-team">
+                <h2>Нашият екип</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Анна Иванова">
+                        <h3>Анна Иванова</h3>
+                        <p>Основател & CEO</p>
+                        <p>Анна е страстен кулинар и визионер, който иска да направи храната достъпна за всички.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Петър Георгиев">
+                        <h3>Петър Георгиев</h3>
+                        <p>Главен технолог</p>
+                        <p>Петър гарантира, че нашата платформа работи безупречно, за да ви доставя радост.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Мария Димитрова">
+                        <h3>Мария Димитрова</h3>
+                        <p>Мениджър доставки</p>
+                        <p>Мария организира бързите доставки, за да стигне храната до вас топла и свежа.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="about-values">
+                <h2>Нашите ценности</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <span class="value-icon">🍽️</span>
+                        <h3>Качество</h3>
+                        <p>Работим само с най-добрите ресторанти, за да ви предложим първокласна храна.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🚀</span>
+                        <h3>Бързина</h3>
+                        <p>Доставяме поръчките ви светкавично, защото знаем, че гладът не чака!</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">💖</span>
+                        <h3>Грижа</h3>
+                        <p>Вашето удовлетворение е наш приоритет – от поръчката до доставката.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="about-cta">
+                <h2>Готови ли сте за вкусно приключение?</h2>
+                <button id="explore-cta" class="cta-button">Разгледайте ресторантите</button>
+            </section>
+        </div>
+
+        <div id="login-view" style="display:none;">
+            <h2>Вход</h2>
+            <div class="login-form">
+                <input type="text" id="username" placeholder="Потребителско име" required>
+                <input type="password" id="password" placeholder="Парола" required>
+                <button id="login-button" class="cta-button">Вход</button>
+                <p>Нямате акаунт? <a href="#" id="register-link">Регистрирайте се</a></p>
+            </div>
+        </div>
+
+        <div id="register-view" style="display:none;">
+            <h2>Регистрация</h2>
+            <div class="register-form">
+                <input type="text" id="register-username" placeholder="Потребителско име" required>
+                <input type="email" id="register-email" placeholder="Имейл (abv.bg или gmail.com)" required pattern="[a-zA-Z0-9._%+-]+@(abv\.bg|gmail\.com)">
+                <input type="password" id="register-password" placeholder="Парола" required>
+                <button id="register-button" class="cta-button">Регистрирай се</button>
+                <p>Вече имате акаунт? <a href="#" id="login-from-register-link">Влезте</a></p>
+            </div>
+        </div>
     </main>
+
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">×</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <div id="address-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="address-modal-close" class="modal-close">×</span>
+            <h2>Адрес за доставка</h2>
+            <div class="address-form">
+                <input type="text" id="street" placeholder="Улица и номер" required>
+                <input type="text" id="city" placeholder="Град" required>
+                <input type="text" id="postal-code" placeholder="Пощенски код" required>
+                <button id="address-submit" class="cta-button">Потвърди адреса</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" title="Нагоре">⬆️</button>
 
     <script src="restaurants.js"></script>
     <script src="app.js"></script>
